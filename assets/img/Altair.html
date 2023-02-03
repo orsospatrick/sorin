@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:5000/ui/altair -->
+<html data-adreal-did="1675417232981662" class="css-2v1ndl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; min-height: 100%; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 4px;}
+.ͼ1 .cm-selectionLayer {z-index: -1; contain: size style;}
+.ͼ1 .cm-selectionBackground {position: absolute;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {z-index: 100; contain: size style; pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {position: absolute; border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #f3f9ff;}
+.ͼ3 .cm-activeLine {background-color: #223039;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-diagnostic {padding: 3px 6px 3px 8px; margin-left: -1px; display: block; white-space: pre-wrap;}
+.ͼ1 .cm-diagnostic-error {border-left: 5px solid #d11;}
+.ͼ1 .cm-diagnostic-warning {border-left: 5px solid orange;}
+.ͼ1 .cm-diagnostic-info {border-left: 5px solid #999;}
+.ͼ1 .cm-diagnosticAction {font: inherit; border: none; padding: 2px 4px; background-color: #444; color: white; border-radius: 3px; margin-left: 8px;}
+.ͼ1 .cm-diagnosticSource {font-size: 70%; opacity: 0.7;}
+.ͼ1 .cm-lintRange {background-position: left bottom; background-repeat: repeat-x; padding-bottom: 0.7px;}
+.ͼ1 .cm-lintRange-error {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="3">%3Cpath%20d%3D%22m0%202.5%20l2%20-1.5%20l1%200%20l2%201.5%20l1%200%22%20stroke%3D%22%23d11%22%20fill%3D%22none%22%20stroke-width%3D%22.7%22%2F%3E</svg>');}
+.ͼ1 .cm-lintRange-warning {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="3">%3Cpath%20d%3D%22m0%202.5%20l2%20-1.5%20l1%200%20l2%201.5%20l1%200%22%20stroke%3D%22orange%22%20fill%3D%22none%22%20stroke-width%3D%22.7%22%2F%3E</svg>');}
+.ͼ1 .cm-lintRange-info {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="3">%3Cpath%20d%3D%22m0%202.5%20l2%20-1.5%20l1%200%20l2%201.5%20l1%200%22%20stroke%3D%22%23999%22%20fill%3D%22none%22%20stroke-width%3D%22.7%22%2F%3E</svg>');}
+.ͼ1 .cm-lintRange-active {background-color: #ffdd9980;}
+.ͼ1 .cm-tooltip-lint {padding: 0; margin: 0;}
+.ͼ1 .cm-lintPoint:after {content: ""; position: absolute; bottom: 0; left: -2px; border-left: 3px solid transparent; border-right: 3px solid transparent; border-bottom: 4px solid #d11;}
+.ͼ1 .cm-lintPoint {position: relative;}
+.ͼ1 .cm-lintPoint-warning:after {border-bottom-color: orange;}
+.ͼ1 .cm-lintPoint-info:after {border-bottom-color: #999;}
+.ͼ1 .cm-panel.cm-panel-lint ul [aria-selected] u {text-decoration: underline;}
+.ͼ1 .cm-panel.cm-panel-lint ul [aria-selected] {background-color: #ddd;}
+.ͼ1 .cm-panel.cm-panel-lint ul:focus [aria-selected] {background: #bdf; background-color: Highlight; color: white; color: HighlightText;}
+.ͼ1 .cm-panel.cm-panel-lint ul u {text-decoration: none;}
+.ͼ1 .cm-panel.cm-panel-lint ul {max-height: 100px; overflow-y: auto; padding: 0; margin: 0;}
+.ͼ1 .cm-panel.cm-panel-lint [name=close] {position: absolute; top: 0; right: 2px; background: inherit; border: none; font: inherit; padding: 0; margin: 0;}
+.ͼ1 .cm-panel.cm-panel-lint {position: relative;}
+.ͼ1 .cm-panel.cm-search [name=close] {position: absolute; top: 0; right: 4px; background-color: inherit; border: none; font: inherit; padding: 0; margin: 0;}
+.ͼ1 .cm-panel.cm-search input, .ͼ1 .cm-panel.cm-search button, .ͼ1 .cm-panel.cm-search label {margin: .2em .6em .2em 0;}
+.ͼ1 .cm-panel.cm-search input[type=checkbox] {margin-right: .2em;}
+.ͼ1 .cm-panel.cm-search label {font-size: 80%; white-space: pre;}
+.ͼ1 .cm-panel.cm-search {padding: 2px 6px 4px; position: relative;}
+.ͼ2 .cm-searchMatch {background-color: #ffff0054;}
+.ͼ3 .cm-searchMatch {background-color: #00ffff8a;}
+.ͼ2 .cm-searchMatch-selected {background-color: #ff6a0054;}
+.ͼ3 .cm-searchMatch-selected {background-color: #ff00ff8a;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 1px 3px; line-height: 1.2;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: monospace; white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ2 .cm-tooltip-autocomplete ul li[aria-selected] {background: #17c; color: white;}
+.ͼ3 .cm-tooltip-autocomplete ul li[aria-selected] {background: #347; color: white;}
+.ͼ1 .cm-completionListIncompleteTop:before, .ͼ1 .cm-completionListIncompleteBottom:after {content: "···"; opacity: 0.5; display: block; text-align: center;}
+.ͼ1 .cm-tooltip.cm-completionInfo {position: absolute; padding: 3px 9px; width: max-content; max-width: 300px;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ2 .cm-snippetField {background-color: #00000022;}
+.ͼ3 .cm-snippetField {background-color: #ffffff22;}
+.ͼ1 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ1 .cm-completionMatchedText {text-decoration: underline;}
+.ͼ1 .cm-completionDetail {margin-left: 0.5em; font-style: italic;}
+.ͼ1 .cm-completionIcon {font-size: 90%; width: .8em; display: inline-block; text-align: center; padding-right: .6em; opacity: 0.6;}
+.ͼ1 .cm-completionIcon-function:after, .ͼ1 .cm-completionIcon-method:after {content: 'ƒ';}
+.ͼ1 .cm-completionIcon-class:after {content: '○';}
+.ͼ1 .cm-completionIcon-interface:after {content: '◌';}
+.ͼ1 .cm-completionIcon-variable:after {content: '𝑥';}
+.ͼ1 .cm-completionIcon-constant:after {content: '𝐶';}
+.ͼ1 .cm-completionIcon-type:after {content: '𝑡';}
+.ͼ1 .cm-completionIcon-enum:after {content: '∪';}
+.ͼ1 .cm-completionIcon-property:after {content: '□';}
+.ͼ1 .cm-completionIcon-keyword:after {content: '🔑︎';}
+.ͼ1 .cm-completionIcon-namespace:after {content: '▢';}
+.ͼ1 .cm-completionIcon-text:after {content: 'abc'; font-size: 50%; vertical-align: middle;}
+.ͼ1 .cm-tooltip {z-index: 100;}
+.ͼ2 .cm-tooltip {border: 1px solid #bbb; background-color: #f5f5f5;}
+.ͼ2 .cm-tooltip-section:not(:first-child) {border-top: 1px solid #bbb;}
+.ͼ3 .cm-tooltip {background-color: #333338; color: white;}
+.ͼ1 .cm-tooltip-arrow:before, .ͼ1 .cm-tooltip-arrow:after {content: ''; position: absolute; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:before {border-top: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:after {border-top: 7px solid #f5f5f5; bottom: 1px;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow {bottom: -7px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:before {border-bottom: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:after {border-bottom: 7px solid #f5f5f5; top: 1px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow {top: -7px;}
+.ͼ1 .cm-tooltip-arrow {height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:before {border-top-color: #333338; border-bottom-color: #333338;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:after {border-top-color: transparent; border-bottom-color: transparent;}
+.ͼ2h.cm-editor {cursor: text;}
+.ͼ2h.cm-editor.cm-focused {outline: none;}
+.ͼ2h .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ2h .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ2h .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ2h .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ2h .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ2h .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ2h .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ2h .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ2h .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ2h .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ2h .cm-completionIcon:empty {display: none;}
+.ͼ2h .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ2h .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ2h .cm-panel-lint {border-color: red;}
+.ͼ2h .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ2h .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ2h .cm-cursor {border-color: var(--theme-font-color);}
+.ͼ8.cm-editor.cm-focused {outline: none;}
+.ͼ8.cm-editor .cm-line {font-family: var(--font-family); cursor: text;}
+.ͼ8 .cm-scroller::-webkit-scrollbar {display: none;}
+.ͼ8 .cm-tooltip-hover {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; padding: 4px;}
+.ͼ8 .cm-tooltip-variable-value .cm-tooltip-arrow:before {border-top-color: var(--theme-bg-color);}
+.ͼ8 .cm-tooltip-variable-value .cm-tooltip-arrow:after {border-top-color: transparent;}
+.ͼ8 .cm-tooltip-variable-value {line-height: 1.2; color: var(--theme-font-color);}
+.ͼ1.cm-focused .cm-matchingBracket {background-color: #328c8252;}
+.ͼ1.cm-focused .cm-nonmatchingBracket {background-color: #bb555544;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼ2x.cm-editor {cursor: text;}
+.ͼ2x.cm-editor.cm-focused {outline: none;}
+.ͼ2x .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ2x .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ2x .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ2x .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ2x .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ2x .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ2x .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ2x .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ2x .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ2x .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ2x .cm-completionIcon:empty {display: none;}
+.ͼ2x .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ2x .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ2x .cm-panel-lint {border-color: red;}
+.ͼ2x .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ2x .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ2x .cm-cursor {border-color: var(--theme-font-color);}
+.ͼ2y {color: var(--editor-keyword-color);}
+.ͼ2z {color: var(--editor-property-color);}
+.ͼ30 {color: var(--editor-variable-color);}
+.ͼ31 {color: var(--editor-builtin-color);}
+.ͼ32 {color: var(--editor-def-color);}
+.ͼ33 {color: var(--editor-number-color);}
+.ͼ34 {color: var(--editor-keyword-color);}
+.ͼ35 {color: var(--editor-comment-color);}
+.ͼ36 {color: var(--editor-attribute-color);}
+.ͼ37 {color: var(--editor-punctuation-color);}
+.ͼ38 {font-weight: bold;}
+.ͼ39 {font-style: italic;}
+.ͼ3a {text-decoration: line-through;}
+.ͼ3b {color: var(--editor-atom-color);}
+.ͼ3c {color: var(--editor-string-color);}
+.ͼ21.cm-editor {cursor: text;}
+.ͼ21.cm-editor.cm-focused {outline: none;}
+.ͼ21 .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ21 .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ21 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ21 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ21 .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ21 .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ21 .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ21 .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ21 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ21 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ21 .cm-completionIcon:empty {display: none;}
+.ͼ21 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ21 .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ21 .cm-panel-lint {border-color: red;}
+.ͼ21 .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ21 .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ21 .cm-cursor {border-color: var(--theme-font-color);}
+.ͼ22 {color: var(--editor-keyword-color);}
+.ͼ23 {color: var(--editor-property-color);}
+.ͼ24 {color: var(--editor-variable-color);}
+.ͼ25 {color: var(--editor-builtin-color);}
+.ͼ26 {color: var(--editor-def-color);}
+.ͼ27 {color: var(--editor-number-color);}
+.ͼ28 {color: var(--editor-keyword-color);}
+.ͼ29 {color: var(--editor-comment-color);}
+.ͼ2a {color: var(--editor-attribute-color);}
+.ͼ2b {color: var(--editor-punctuation-color);}
+.ͼ2c {font-weight: bold;}
+.ͼ2d {font-style: italic;}
+.ͼ2e {text-decoration: line-through;}
+.ͼ2f {color: var(--editor-atom-color);}
+.ͼ2g {color: var(--editor-string-color);}
+.ͼ1l.cm-editor {cursor: text;}
+.ͼ1l.cm-editor.cm-focused {outline: none;}
+.ͼ1l .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ1l .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ1l .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ1l .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ1l .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ1l .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ1l .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ1l .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ1l .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ1l .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ1l .cm-completionIcon:empty {display: none;}
+.ͼ1l .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ1l .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ1l .cm-panel-lint {border-color: red;}
+.ͼ1l .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ1l .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ1l .cm-cursor {border-color: var(--theme-font-color);}
+.ͼ1m {color: var(--editor-keyword-color);}
+.ͼ1n {color: var(--editor-property-color);}
+.ͼ1o {color: var(--editor-variable-color);}
+.ͼ1p {color: var(--editor-builtin-color);}
+.ͼ1q {color: var(--editor-def-color);}
+.ͼ1r {color: var(--editor-number-color);}
+.ͼ1s {color: var(--editor-keyword-color);}
+.ͼ1t {color: var(--editor-comment-color);}
+.ͼ1u {color: var(--editor-attribute-color);}
+.ͼ1v {color: var(--editor-punctuation-color);}
+.ͼ1w {font-weight: bold;}
+.ͼ1x {font-style: italic;}
+.ͼ1y {text-decoration: line-through;}
+.ͼ1z {color: var(--editor-atom-color);}
+.ͼ20 {color: var(--editor-string-color);}
+.ͼ15.cm-editor {cursor: text;}
+.ͼ15.cm-editor.cm-focused {outline: none;}
+.ͼ15 .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ15 .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ15 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ15 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ15 .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ15 .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ15 .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ15 .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ15 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ15 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ15 .cm-completionIcon:empty {display: none;}
+.ͼ15 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ15 .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ15 .cm-panel-lint {border-color: red;}
+.ͼ15 .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ15 .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ15 .cm-cursor {border-color: var(--theme-font-color);}
+.ͼ16 {color: var(--editor-keyword-color);}
+.ͼ17 {color: var(--editor-property-color);}
+.ͼ18 {color: var(--editor-variable-color);}
+.ͼ19 {color: var(--editor-builtin-color);}
+.ͼ1a {color: var(--editor-def-color);}
+.ͼ1b {color: var(--editor-number-color);}
+.ͼ1c {color: var(--editor-keyword-color);}
+.ͼ1d {color: var(--editor-comment-color);}
+.ͼ1e {color: var(--editor-attribute-color);}
+.ͼ1f {color: var(--editor-punctuation-color);}
+.ͼ1g {font-weight: bold;}
+.ͼ1h {font-style: italic;}
+.ͼ1i {text-decoration: line-through;}
+.ͼ1j {color: var(--editor-atom-color);}
+.ͼ1k {color: var(--editor-string-color);}
+.ͼp.cm-editor {cursor: text;}
+.ͼp.cm-editor.cm-focused {outline: none;}
+.ͼp .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼp .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼp .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼp .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼp .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼp .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼp .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼp .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼp .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼp .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼp .cm-completionIcon:empty {display: none;}
+.ͼp .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼp .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼp .cm-panel-lint {border-color: red;}
+.ͼp .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼp .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼp .cm-cursor {border-color: var(--theme-font-color);}
+.ͼq {color: var(--editor-keyword-color);}
+.ͼr {color: var(--editor-property-color);}
+.ͼs {color: var(--editor-variable-color);}
+.ͼt {color: var(--editor-builtin-color);}
+.ͼu {color: var(--editor-def-color);}
+.ͼv {color: var(--editor-number-color);}
+.ͼw {color: var(--editor-keyword-color);}
+.ͼx {color: var(--editor-comment-color);}
+.ͼy {color: var(--editor-attribute-color);}
+.ͼz {color: var(--editor-punctuation-color);}
+.ͼ10 {font-weight: bold;}
+.ͼ11 {font-style: italic;}
+.ͼ12 {text-decoration: line-through;}
+.ͼ13 {color: var(--editor-atom-color);}
+.ͼ14 {color: var(--editor-string-color);}
+.ͼ9.cm-editor {cursor: text;}
+.ͼ9.cm-editor.cm-focused {outline: none;}
+.ͼ9 .cm-tooltip > ul {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ9 .cm-tooltip {background: var(--theme-bg-color); border: 1px solid var(--theme-border-color); border-radius: 4px; font-size: calc((var(--editor-font-size) / var(--baseline-size)) * 1rem);}
+.ͼ9 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 2px 4px; line-height: 1.4;}
+.ͼ9 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: var(--editor-font-family); white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; list-style: none; margin: 0; padding: 0;}
+.ͼ9 .cm-tooltip.cm-tooltip-autocomplete {padding: 4px;}
+.ͼ9 .cm-tooltip-autocomplete ul li {background: var(--theme-bg-color); color: var(--theme-font-color); border-radius: 4px; display: flex; flex: 1; flex-direction: row; justify-content: space-between;}
+.ͼ9 .cm-tooltip-autocomplete ul li[aria-selected] {background: var(--primary-color);}
+.ͼ9 .cm-tooltip.cm-completionInfo {position: absolute; padding: 4px; border-radius: 4px; width: max-content; max-width: 400px; background: var(--theme-bg-color); color: var(--theme-font-color); line-height: 1.4; border: 1px solid var(--theme-border-color); margin: 0 4px;}
+.ͼ9 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ9 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ9 .cm-completionIcon:empty {display: none;}
+.ͼ9 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ9 .cm-completionMatchedText {text-decoration: none; font-weight: bold;}
+.ͼ9 .cm-panel-lint {border-color: red;}
+.ͼ9 .cm-tooltip-lint {background: var(--theme-bg-color); color: var(--theme-font-color);}
+.ͼ9 .cm-gqlCompletionDescriptionTypeContent {color: var(--primary-color); background: rgba(var(--rgb-primary), .15); cursor: pointer; padding: 3px; border-radius: 2px; margin-bottom: 5px;}
+.ͼ9 .cm-cursor {border-color: var(--theme-font-color);}
+.ͼa {color: var(--editor-keyword-color);}
+.ͼb {color: var(--editor-property-color);}
+.ͼc {color: var(--editor-variable-color);}
+.ͼd {color: var(--editor-builtin-color);}
+.ͼe {color: var(--editor-def-color);}
+.ͼf {color: var(--editor-number-color);}
+.ͼg {color: var(--editor-keyword-color);}
+.ͼh {color: var(--editor-comment-color);}
+.ͼi {color: var(--editor-attribute-color);}
+.ͼj {color: var(--editor-punctuation-color);}
+.ͼk {font-weight: bold;}
+.ͼl {font-style: italic;}
+.ͼm {text-decoration: line-through;}
+.ͼn {color: var(--editor-atom-color);}
+.ͼo {color: var(--editor-string-color);}
+.ͼ4 .cm-line ::selection {background-color: transparent !important;}
+.ͼ4 .cm-line::selection {background-color: transparent !important;}
+.ͼ4 .cm-line {caret-color: transparent !important;}
+.ͼ5 {background-color: var(--theme-off-bg-color); min-height: 200px;}
+.ͼ7 {background-color: var(--theme-off-bg-color); min-height: 200px;}
+.ͼ6 {background-color: var(--theme-off-bg-color); min-height: 200px;}
+</style>
+  
+  <title>Altair</title>
+  <!--<base href="//cdn.jsdelivr.net/npm/altair-static/build/dist/">--><base href=".">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://cdn.jsdelivr.net/npm/altair-static/build/dist/favicon.ico">
+  <link href="./Altair_files/styles.css" rel="stylesheet">
+<style>
+    .cdk-overlay-container {
+      position: fixed;
+      z-index: 1000;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .ngx-contextmenu.cdk-overlay-pane {
+      position: absolute;
+      pointer-events: auto;
+      box-sizing: border-box;
+    }
+  </style><style>[_nghost-his-c11] {
+      display: inline-block;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      width: 24px;
+      height: 24px;
+    }</style><style data-emotion="css"></style><style>.ngxp__container{display:none;position:absolute;border-radius:3px;border:1px solid grey;box-shadow:0 0 2px rgba(0,0,0,.5);padding:10px}.ngxp__container.ngxp__animation{-webkit-animation:150ms ease-out ngxp-fadeIn;animation:150ms ease-out ngxp-fadeIn}.ngxp__container>.ngxp__arrow{border-color:grey;width:0;height:0;border-style:solid;position:absolute;margin:5px}.ngxp__container[x-placement^=bottom],.ngxp__container[x-placement^=left],.ngxp__container[x-placement^=right],.ngxp__container[x-placement^=top]{display:block}.ngxp__container[x-placement^=top]{margin-bottom:5px}.ngxp__container[x-placement^=top]>.ngxp__arrow{border-width:5px 5px 0;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;bottom:-5px;left:calc(50% - 5px);margin-top:0;margin-bottom:0}.ngxp__container[x-placement^=top]>.ngxp__arrow.__force-arrow{border-right-color:transparent!important;border-bottom-color:transparent!important;border-left-color:transparent!important}.ngxp__container[x-placement^=bottom]{margin-top:5px}.ngxp__container[x-placement^=bottom]>.ngxp__arrow{border-width:0 5px 5px;border-top-color:transparent;border-right-color:transparent;border-left-color:transparent;top:-5px;left:calc(50% - 5px);margin-top:0;margin-bottom:0}.ngxp__container[x-placement^=bottom]>.ngxp__arrow.__force-arrow{border-top-color:transparent!important;border-right-color:transparent!important;border-left-color:transparent!important}.ngxp__container[x-placement^=right]{margin-left:5px}.ngxp__container[x-placement^=right]>.ngxp__arrow{border-width:5px 5px 5px 0;border-top-color:transparent;border-bottom-color:transparent;border-left-color:transparent;left:-5px;top:calc(50% - 5px);margin-left:0;margin-right:0}.ngxp__container[x-placement^=right]>.ngxp__arrow.__force-arrow{border-top-color:transparent!important;border-bottom-color:transparent!important;border-left-color:transparent!important}.ngxp__container[x-placement^=left]{margin-right:5px}.ngxp__container[x-placement^=left]>.ngxp__arrow{border-width:5px 0 5px 5px;border-top-color:transparent;border-bottom-color:transparent;border-right-color:transparent;right:-5px;top:calc(50% - 5px);margin-left:0;margin-right:0}.ngxp__container[x-placement^=left]>.ngxp__arrow.__force-arrow{border-top-color:transparent!important;border-bottom-color:transparent!important;border-right-color:transparent!important}@-webkit-keyframes ngxp-fadeIn{0%{display:none;opacity:0}1%{display:block;opacity:0}100%{display:block;opacity:1}}@keyframes ngxp-fadeIn{0%{display:none;opacity:0}1%{display:block;opacity:0}100%{display:block;opacity:1}}</style></head>
+
+<body>
+  <app-root ng-version="14.0.3"><app-altair><div appfiledrop="" class="app-wrapper">
+  <nz-layout class="main-container ant-layout">
+    <!---->
+    <app-header><div class="header__logo-wrapper">
+  <img src="./Altair_files/altair_logo.svg" alt="logo" class="header__logo">
+</div>
+
+<app-window-switcher _nghost-his-c84=""><ul _ngcontent-his-c84="" sortablejs="" class="window-switcher__list">
+  <li _ngcontent-his-c84="" class="window-switcher__item window-switcher__item--active ng-star-inserted">
+    <!---->
+    <div _ngcontent-his-c84="" class="window-switcher__input" contenteditable="false">
+      Window 1
+    </div>
+    <!---->
+  </li><!---->
+  <li _ngcontent-his-c84="" class="window-switcher__item ng-star-inserted">
+    + Add new
+  </li><!---->
+</ul>
+
+<context-menu _ngcontent-his-c84=""> </context-menu>
+</app-window-switcher>
+
+<div class="header__actions">
+  <ul class="header__menu">
+    <!---->
+
+    <li nz-dropdown="" nztrigger="click" class="header__menu-item ant-dropdown-trigger">
+      <!---->
+      <span class="ng-star-inserted">
+        <app-icon name="eye-off"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><line x1="2" y1="2" x2="22" y2="22"></line></svg></i-lucide>
+</app-icon>
+        <span>No environment</span>
+      </span><!---->
+    </li><!---->
+    <!---->
+    <li nz-dropdown="" nztrigger="click" class="header__menu-item ant-dropdown-trigger">
+      <app-icon name="settings"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></i-lucide>
+</app-icon>
+    </li><!---->
+    <!---->
+  </ul>
+</div>
+</app-header>
+    <nz-layout class="ant-layout">
+      <!---->
+      <!---->
+      <nz-layout class="inner-layout ant-layout">
+        <nz-content class="main-container-inner ant-layout-content">
+          <div class="app-side-menu">
+            <div class="side-menu__main">
+              <a track-id="show_set_headers" class="side-menu-item" aria-label="Set Headers">
+                <div class="side-menu-item-icon">
+                  <app-icon name="loader"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg></i-lucide>
+</app-icon>
+                </div>
+                <div class="side-menu-item-label">
+                  Set Headers
+                </div>
+              </a>
+              <a track-id="show_set_subscription_url" class="side-menu-item" aria-label="Subscription URL">
+                <div class="side-menu-item-icon">
+                  <app-icon name="repeat"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="m7 22-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></i-lucide>
+</app-icon>
+                </div>
+                <div class="side-menu-item-label">
+                  Subscription URL
+                </div>
+              </a>
+              <a track-id="show_history" class="side-menu-item" aria-label="History">
+                <div class="side-menu-item-icon">
+                  <app-icon name="watch"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"></circle><polyline points="12 10 12 12 13 13"></polyline><path d="m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05"></path><path d="m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05"></path></svg></i-lucide>
+</app-icon>
+                </div>
+                <div class="side-menu-item-label">
+                  History
+                </div>
+              </a>
+              <div class="side-menu-divider"></div>
+              <div class="side-menu-item">
+                <div class="side-menu-item-icon">
+                  <app-icon name="briefcase"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></i-lucide>
+</app-icon>
+                </div>
+                <div class="side-menu-item-submenu">
+                  <a track-id="prettify" class="submenu-item" aria-label="Prettify">
+                    <div class="submenu-item-icon">
+                      <app-icon name="sun"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Prettify
+                    </div>
+                  </a>
+                  <a track-id="compress_query" class="submenu-item" aria-label="Compress">
+                    <div class="submenu-item-icon">
+                      <app-icon name="minimize-2"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Compress
+                    </div>
+                  </a>
+                  <a track-id="clear" class="submenu-item" aria-label="Clear">
+                    <div class="submenu-item-icon">
+                      <app-icon name="trash-2"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Clear
+                    </div>
+                  </a>
+                  <a track-id="copy_as_curl" class="submenu-item" aria-label="Copy as cURL">
+                    <div class="submenu-item-icon">
+                      <app-icon name="terminal"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Copy as cURL
+                    </div>
+                  </a>
+                  <a track-id="convert_to_named_query" class="submenu-item" aria-label="Convert to named query">
+                    <div class="submenu-item-icon">
+                      <app-icon name="tag"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path><path d="M7 7h.01"></path></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Convert to named query
+                    </div>
+                  </a>
+                  <a class="submenu-item" aria-label="Refactor Query">
+                    <div class="submenu-item-icon">
+                      <app-icon name="disc"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></i-lucide>
+</app-icon>
+                    </div>
+                    <div class="submenu-item-label">
+                      Refactor Query
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="side-menu-divider"></div>
+
+              <div class="side-menu__panels">
+                <!---->
+              </div>
+
+              <div class="side-menu__main-bottom">
+                <a track-id="show_collections" class="side-menu-item" aria-label="Collections">
+                  <div class="side-menu-item-icon">
+                    <app-icon name="folder"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg></i-lucide>
+</app-icon>
+                  </div>
+                  <div class="side-menu-item-label">
+                    Collections
+                  </div>
+                </a>
+                <!---->
+              </div>
+            </div>
+            <div class="side-menu__extra">
+              <app-query-collections _nghost-his-c148=""><div _ngcontent-his-c148="" class="query-collections-wrapper query-collections-wrapper--close">
+  <!---->
+</div>
+</app-query-collections>
+            </div>
+            <div class="sidebar__panels">
+              <!---->
+            </div>
+          </div>
+          
+            <app-window class="ng-tns-c223-4 ng-star-inserted"><div class="app-window__content ng-tns-c223-4">
+  <app-loader class="ng-tns-c223-4 ng-tns-c216-5 ng-star-inserted"><!---->
+</app-loader>
+  <app-url-box class="ng-tns-c223-4"><div class="url-box">
+  <div class="url-box__method-wrapper">
+    <button type="button" nz-dropdown="" nztrigger="click" track-id="http_verb" class="url-box__button url-box__button--method ant-dropdown-trigger" value="POST">
+      POST
+      
+    </button><!---->
+
+    <!---->
+  </div>
+  <div class="url-box__input-container">
+    <!---->
+    <app-x-input track-id="set_url" placeholder="Enter URL" class="url-box__input ng-untouched ng-pristine ng-valid"><app-codemirror class="ng-untouched ng-pristine ng-valid ng-star-inserted"><div class="editor-ref"><div class="cm-editor ͼ1 ͼ2 ͼ8 ͼ2h"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true" class="cm-content" style="tab-size: 4;" role="textbox" aria-multiline="true" aria-autocomplete="list"><div class="cm-line">http://localhost:5000/graphql</div></div></div></div></div>
+</app-codemirror><!---->
+</app-x-input>
+  </div>
+  <div class="url-box__input-actions">
+    <button type="button" nz-dropdown="" nztrigger="click" class="url-box__button ant-dropdown-trigger">
+      <app-icon name="save"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg></i-lucide>
+</app-icon>
+    </button><!---->
+    <!---->
+    <button type="button" track-id="reload_docs" class="url-box__button">
+      <app-icon name="refresh-ccw"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"></path><path d="M21 12A9 9 0 0 0 6 5.3L3 8"></path><path d="M21 22v-6h-6"></path><path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"></path></svg></i-lucide>
+</app-icon>
+    </button><popper-content class="ng-star-inserted">
+    <div class="ngxp__container ngxp__animation tooltip-content" aria-hidden="true" role="popper" style="display: none; opacity: 0;">
+      <div class="ngxp__inner ng-star-inserted">Reload Docs</div><!---->
+      <!---->
+      <div class="ngxp__arrow" style="left: 36px;"></div>
+
+    </div>
+  </popper-content><!----><!---->
+    <button type="button" track-id="show_docs" class="url-box__button url-box__button--active">
+      Docs
+    </button>
+  </div>
+  <div class="send-request__wrapper">
+    <button track-id="set_request" class="app-button active-primary send-request__button ng-star-inserted">
+      <!---->
+      <span class="ng-star-inserted">Send Request</span><!---->
+    </button><!---->
+    <!---->
+    <!---->
+  </div>
+</div>
+</app-url-box>
+  <div class="main-content-area ng-tns-c223-4">
+    <div data-resize-container="" class="main-content-row ng-tns-c223-4">
+      <app-query-editor class="ng-tns-c223-4" _nghost-his-c183="" style="flex-grow: 1;"><nz-tabset _ngcontent-his-c183="" nzsize="small" class="ant-tabs main-view-tabs ant-tabs-top ant-tabs-small"><nz-tabs-nav role="tablist" class="ant-tabs-nav ng-star-inserted"><div class="ant-tabs-nav-wrap"><div nztabscrolllist="" class="ant-tabs-nav-list" style="transform: translate(0px, 0px);"><div class="ant-tabs-tab ng-star-inserted ant-tabs-tab-active" style="margin-right: 16px;"><div role="tab" nztabnavitem="" cdkmonitorelementfocus="" class="ant-tabs-tab-btn" tabindex="0" aria-disabled="false" aria-selected="true" aria-controls="nz-tabs-0-tab-0">Query<!----><!----><!----></div></div><div class="ant-tabs-tab ng-star-inserted" style="margin-right: 16px;"><div role="tab" nztabnavitem="" cdkmonitorelementfocus="" class="ant-tabs-tab-btn" tabindex="-1" aria-disabled="false" aria-selected="false" aria-controls="nz-tabs-0-tab-1">
+      <span _ngcontent-his-c183="" class="ng-star-inserted">
+        Pre-request
+      </span>
+    <!----><!----></div></div><div class="ant-tabs-tab ng-star-inserted" style="margin-right: 16px;"><div role="tab" nztabnavitem="" cdkmonitorelementfocus="" class="ant-tabs-tab-btn" tabindex="-1" aria-disabled="false" aria-selected="false" aria-controls="nz-tabs-0-tab-2">
+      <span _ngcontent-his-c183="" class="ng-star-inserted">
+        Post-request
+      </span>
+    <!----><!----></div></div><!----><!----><div nz-tabs-ink-bar="" class="ant-tabs-ink-bar" style="left: 0px; width: 51px;"></div></div></div><nz-tab-nav-operation class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden"><button nz-dropdown="" type="button" tabindex="-1" aria-hidden="true" nzoverlayclassname="nz-tabs-dropdown" class="ant-tabs-nav-more ant-dropdown-trigger"><i nz-icon="" nztype="ellipsis" class="anticon anticon-ellipsis"><svg viewBox="64 64 896 896" focusable="false" fill="currentColor" width="1em" height="1em" data-icon="ellipsis" aria-hidden="true"><path d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"></path></svg></i></button><!----><!----><!----></nz-tab-nav-operation><!----></nz-tabs-nav><!----><div class="ant-tabs-content-holder"><div class="ant-tabs-content ant-tabs-content-top"><div nz-tab-body="" class="ant-tabs-tabpane ng-star-inserted ant-tabs-tabpane-active" tabindex="0" aria-hidden="false" style="">
+    <div _ngcontent-his-c183="" class="query-editor-container ng-star-inserted" style="">
+      <app-beta-indicator _ngcontent-his-c183="" title="New editor" description="This is a complete replacement of the old editor which allows more possibilities. It also comes with some new improvements and features." featurekey="newEditor"><div class="beta-indicator-wrapper">
+  <div nz-popover="" class="beta-indicator">
+    <span>Beta</span>
+  </div><!---->
+  <!---->
+</div>
+</app-beta-indicator>
+      <app-codemirror _ngcontent-his-c183="" ngdefaultcontrol="" class="query-editor__input cm6-full-height ng-valid ng-star-inserted ng-touched ng-dirty"><div class="editor-ref"><div class="cm-editor cm-focused ͼ1 ͼ2 ͼ4 ͼ2x"><div aria-live="polite" style="position: absolute; top: -10000px;"><div>Selection deleted</div></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 998px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">99</div><div class="cm-gutterElement" style="height: 18px; margin-top: 4px;">1</div><div class="cm-gutterElement" style="height: 18px;">2</div><div class="cm-gutterElement" style="height: 18px;">3</div><div class="cm-gutterElement" style="height: 18px;">4</div><div class="cm-gutterElement" style="height: 18px; margin-top: 18px;">5</div><div class="cm-gutterElement" style="height: 18px;">6</div><div class="cm-gutterElement" style="height: 18px;">7</div><div class="cm-gutterElement" style="height: 18px;">8</div><div class="cm-gutterElement" style="height: 36px;">9</div><div class="cm-gutterElement" style="height: 18px;">10</div><div class="cm-gutterElement" style="height: 18px;">11</div><div class="cm-gutterElement" style="height: 18px;">12</div><div class="cm-gutterElement" style="height: 18px;">13</div><div class="cm-gutterElement" style="height: 18px;">14</div><div class="cm-gutterElement" style="height: 18px;">15</div><div class="cm-gutterElement" style="height: 18px;">16</div><div class="cm-gutterElement" style="height: 18px;">17</div><div class="cm-gutterElement" style="height: 18px;">18</div><div class="cm-gutterElement" style="height: 18px;">19</div><div class="cm-gutterElement" style="height: 18px;">20</div><div class="cm-gutterElement" style="height: 18px;">21</div><div class="cm-gutterElement" style="height: 18px;">22</div><div class="cm-gutterElement" style="height: 18px;">23</div><div class="cm-gutterElement" style="height: 18px;">24</div><div class="cm-gutterElement" style="height: 18px;">25</div><div class="cm-gutterElement" style="height: 18px;">26</div><div class="cm-gutterElement" style="height: 18px;">27</div><div class="cm-gutterElement" style="height: 18px;">28</div><div class="cm-gutterElement" style="height: 18px;">29</div><div class="cm-gutterElement" style="height: 18px;">30</div><div class="cm-gutterElement" style="height: 18px;">31</div><div class="cm-gutterElement" style="height: 18px;">32</div><div class="cm-gutterElement" style="height: 18px;">33</div><div class="cm-gutterElement" style="height: 18px;">34</div><div class="cm-gutterElement" style="height: 18px;">35</div><div class="cm-gutterElement" style="height: 18px;">36</div><div class="cm-gutterElement" style="height: 18px;">37</div><div class="cm-gutterElement" style="height: 18px;">38</div><div class="cm-gutterElement" style="height: 18px;">39</div><div class="cm-gutterElement" style="height: 18px;">40</div><div class="cm-gutterElement" style="height: 18px;">41</div><div class="cm-gutterElement" style="height: 18px;">42</div><div class="cm-gutterElement" style="height: 18px;">43</div><div class="cm-gutterElement" style="height: 18px;">44</div><div class="cm-gutterElement" style="height: 18px;">45</div><div class="cm-gutterElement" style="height: 18px;">46</div><div class="cm-gutterElement" style="height: 18px;">47</div><div class="cm-gutterElement" style="height: 18px;">48</div><div class="cm-gutterElement" style="height: 18px;">49</div><div class="cm-gutterElement" style="height: 18px;">50</div><div class="cm-gutterElement" style="height: 18px;">51</div><div class="cm-gutterElement" style="height: 18px;">52</div><div class="cm-gutterElement" style="height: 18px;">53</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 94px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 36px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true" class="cm-content cm-lineWrapping" style="tab-size: 2;" role="textbox" aria-multiline="true" aria-autocomplete="list"><div class="cm-line"><span class="ͼ35"># Welcome to Altair GraphQL Client.</span></div><div class="cm-line"><span class="ͼ35"># You can send your request using CmdOrCtrl + Enter.</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ35"># Enter your graphQL query here.</span></div><div class="query-editor__line-widget" contenteditable="false">► (Send query)</div><div class="cm-line"><span class="ͼ2y">query</span><span class="ͼ37">{</span></div><div class="cm-line">    <span class="ͼ2z">creditors</span><span class="ͼ37">{</span></div><div class="cm-line">      <span class="ͼ2z">transactions</span><span class="ͼ37">{</span></div><div class="cm-line">          <span class="ͼ2z">invoiceRegisterTransactions</span><span class="ͼ37">{</span></div><div class="cm-line">                <span class="ͼ2z">purchaseOrderDetailLines</span><span class="ͼ37">(</span><span class="ͼ36">after</span>: <span class="ͼ33">0</span>, <span class="ͼ36">first</span>: <span class="ͼ33">0</span>, <span class="ͼ3b">sort</span>:<span class="ͼ37">{</span><span class="ͼ37">}</span>, <span class="ͼ3b">filter</span>:<span class="ͼ37">{</span><span class="ͼ2z">orderNumber</span>:<span class="ͼ2z"> </span><span class="ͼ37">{</span><span class="ͼ3b">contains</span>:<span class="ͼ2z"> </span><span class="ͼ3c">"5074"</span><span class="ͼ37">}</span><span class="ͼ37">}</span><span class="ͼ37">}</span><span class="cm-lintRange cm-lintRange-error"><span class="ͼ37">)</span></span><span class="ͼ37">{</span></div><div class="cm-line">                  <span class="ͼ2z">items</span><span class="ͼ37">{</span></div><div class="cm-line">                    <span class="ͼ2z">orderNumber</span></div><div class="cm-line">    <span class="ͼ2z">detail</span></div><div class="cm-line">    <span class="ͼ2z">quantityOrdered</span></div><div class="cm-line">    <span class="ͼ2z">quantityReceived</span></div><div class="cm-line">    <span class="ͼ2z">quantityInvoiced</span></div><div class="cm-line">    <span class="ͼ2z">quantityMatched</span></div><div class="cm-line">    <span class="ͼ2z">homePrice</span></div><div class="cm-line">    <span class="ͼ2z">net</span></div><div class="cm-line">    <span class="ͼ2z">gross</span></div><div class="cm-line">    <span class="ͼ2z">taxCode</span></div><div class="cm-line">    <span class="ͼ2z">taxRate</span></div><div class="cm-line">    <span class="ͼ2z">tax</span></div><div class="cm-line">    <span class="ͼ2z">analysisCode</span></div><div class="cm-line">    <span class="ͼ2z">itemCode</span></div><div class="cm-line">    <span class="ͼ2z">orderType</span></div><div class="cm-line">    <span class="ͼ2z">project</span></div><div class="cm-line">    <span class="ͼ2z">costCentre</span></div><div class="cm-line">    <span class="ͼ2z">requiredDate</span></div><div class="cm-line">    <span class="ͼ2z">transactionUserKey1</span></div><div class="cm-line">    <span class="ͼ2z">transactionUserKey2</span></div><div class="cm-line">    <span class="ͼ2z">transactionUserKey3</span></div><div class="cm-line">    <span class="ͼ2z">transactionUserKey4</span></div><div class="cm-line">    <span class="ͼ2z">transactionUserKey5</span></div><div class="cm-line">    <span class="ͼ2z">currencyCode</span></div><div class="cm-line">    <span class="ͼ2z">matchPartialQuantity</span></div><div class="cm-line">    <span class="ͼ2z">orderSubLedger</span></div><div class="cm-line">    <span class="ͼ2z">orderLinePrimary</span></div><div class="cm-line">    <span class="ͼ2z">quantityOutstandingToInvoice</span></div><div class="cm-line">    <span class="ͼ2z">accountCode</span></div><div class="cm-line">    <span class="ͼ2z">orderDate</span></div><div class="cm-line">    <span class="ͼ2z">periodNumber</span></div><div class="cm-line">    <span class="ͼ2z">yearLabel</span></div><div class="cm-line">    <span class="ͼ2z">orderBatchReference</span></div><div class="cm-line">    <span class="ͼ2z">userId</span></div><div class="cm-line">    <span class="ͼ2z">price</span></div><div class="cm-line">                  <span class="ͼ37">}</span></div><div class="cm-line">              <span class="ͼ37">}</span></div><div class="cm-line">          <span class="ͼ37">}</span></div><div class="cm-line">      <span class="ͼ37">}</span></div><div class="cm-line">    <span class="ͼ37">}</span></div><div class="cm-line"><span class="ͼ37">}</span></div><div class="cm-line"><br></div><div class="cm-line"><br></div></div><div class="cm-selectionLayer" aria-hidden="true"></div><div class="cm-cursorLayer" aria-hidden="true" style="animation-duration: 1200ms; animation-name: cm-blink;"><div class="cm-cursor cm-cursor-primary" style="left: 260.611px; top: 222.486px; height: 16px;"></div></div></div></div></div>
+</app-codemirror><!---->
+      <!---->
+    </div>
+    <div _ngcontent-his-c183="" mwlresizable="" class="variables-editor-container ng-star-inserted" style="">
+      <div _ngcontent-his-c183="" track-id="toggle_variables" class="variables-editor--title">
+        Variables
+      </div>
+      <!---->
+    </div>
+  <!----><!----><!----></div><div nz-tab-body="" class="ant-tabs-tabpane ng-star-inserted" tabindex="-1" aria-hidden="true" style="display: none;"><!----></div><div nz-tab-body="" class="ant-tabs-tabpane ng-star-inserted" tabindex="-1" aria-hidden="true" style="display: none;"><!----></div><!----></div></div></nz-tabset>
+<app-flex-resizer _ngcontent-his-c183="" _nghost-his-c177="" class="is-right"></app-flex-resizer>
+</app-query-editor>
+      <app-query-result class="ng-tns-c223-4" _nghost-his-c210=""><nz-tabset _ngcontent-his-c210="" nzsize="small" class="ant-tabs main-view-tabs query-result__tabs ant-tabs-top ant-tabs-small"><nz-tabs-nav role="tablist" class="ant-tabs-nav ng-star-inserted"><div class="ant-tabs-nav-wrap"><div nztabscrolllist="" class="ant-tabs-nav-list" style="transform: translate(0px, 0px);"><div class="ant-tabs-tab ant-tabs-tab-active ng-star-inserted" style="margin-right: 16px;"><div role="tab" nztabnavitem="" cdkmonitorelementfocus="" class="ant-tabs-tab-btn" tabindex="0" aria-disabled="false" aria-selected="true" aria-controls="nz-tabs-1-tab-0">Result<!----><!----><!----></div></div><div class="ant-tabs-tab ng-star-inserted" style="margin-right: 16px;"><div role="tab" nztabnavitem="" cdkmonitorelementfocus="" class="ant-tabs-tab-btn" tabindex="-1" aria-disabled="false" aria-selected="false" aria-controls="nz-tabs-1-tab-1">Response headers<!----><!----><!----></div></div><!----><!----><div nz-tabs-ink-bar="" class="ant-tabs-ink-bar" style="left: 0px; width: 51px;"></div></div></div><nz-tab-nav-operation class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden"><button nz-dropdown="" type="button" tabindex="-1" aria-hidden="true" nzoverlayclassname="nz-tabs-dropdown" class="ant-tabs-nav-more ant-dropdown-trigger"><i nz-icon="" nztype="ellipsis" class="anticon anticon-ellipsis"><svg viewBox="64 64 896 896" focusable="false" fill="currentColor" width="1em" height="1em" data-icon="ellipsis" aria-hidden="true"><path d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"></path></svg></i></button><!----><!----><!----></nz-tab-nav-operation><!----></nz-tabs-nav><!----><div class="ant-tabs-content-holder"><div class="ant-tabs-content ant-tabs-content-top"><div nz-tab-body="" class="ant-tabs-tabpane ant-tabs-tabpane-active ng-star-inserted" tabindex="0" aria-hidden="false">
+    <div _ngcontent-his-c210="" class="query-result-container ng-star-inserted">
+      <div _ngcontent-his-c210="" class="query-result__normal-container">
+        <!---->
+        
+        <div _ngcontent-his-c210="" class="app-result">
+          <div _ngcontent-his-c210="" class="response-stats">
+            <div _ngcontent-his-c210="" class="l">
+              <span _ngcontent-his-c210="" class="response-status-code response-stats__item" data-status-code="400">400 Bad Request</span>
+              <span _ngcontent-his-c210="" class="response-time response-stats__item"><app-icon _ngcontent-his-c210="" name="clock"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></i-lucide>
+</app-icon> 36ms</span>
+            </div>
+            <div _ngcontent-his-c210="" class="r"></div>
+          </div>
+          <div _ngcontent-his-c210="" class="query-result__top-actions">
+            <button _ngcontent-his-c210="" track-id="clear_result" class="query-result__clear-button">
+              <app-icon _ngcontent-his-c210="" name="trash-2"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></i-lucide>
+</app-icon>
+              Clear
+            </button>
+          </div>
+          <div _ngcontent-his-c210="" class="query-result__bottom-actions">
+            <button _ngcontent-his-c210="" track-id="download_result" class="query-result__download-button">
+              <app-icon _ngcontent-his-c210="" name="download"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></i-lucide>
+</app-icon>
+              Download
+            </button>
+            <!---->
+          </div>
+          <app-codemirror _ngcontent-his-c210="" class="cm6-full-height ng-untouched ng-pristine ng-valid"><div class="editor-ref"><div class="cm-editor ͼ1 ͼ2 ͼ4 ͼ1l"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 1844px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">99</div><div class="cm-gutterElement" style="height: 18px; margin-top: 4px;">1</div><div class="cm-gutterElement" style="height: 18px;">2</div><div class="cm-gutterElement" style="height: 18px;">3</div><div class="cm-gutterElement" style="height: 54px;">4</div><div class="cm-gutterElement" style="height: 18px;">5</div><div class="cm-gutterElement" style="height: 18px;">6</div><div class="cm-gutterElement" style="height: 18px;">7</div><div class="cm-gutterElement" style="height: 18px;">8</div><div class="cm-gutterElement" style="height: 18px;">9</div><div class="cm-gutterElement" style="height: 18px;">10</div><div class="cm-gutterElement" style="height: 18px;">11</div><div class="cm-gutterElement" style="height: 18px;">12</div><div class="cm-gutterElement" style="height: 18px;">13</div><div class="cm-gutterElement" style="height: 18px;">14</div><div class="cm-gutterElement" style="height: 18px;">15</div><div class="cm-gutterElement" style="height: 1116px;">16</div><div class="cm-gutterElement" style="height: 18px;">17</div><div class="cm-gutterElement" style="height: 18px;">18</div><div class="cm-gutterElement" style="height: 18px;">19</div><div class="cm-gutterElement" style="height: 18px;">20</div><div class="cm-gutterElement" style="height: 18px;">21</div><div class="cm-gutterElement" style="height: 18px;">22</div><div class="cm-gutterElement" style="height: 18px;">23</div><div class="cm-gutterElement" style="height: 18px;">24</div><div class="cm-gutterElement" style="height: 18px;">25</div><div class="cm-gutterElement" style="height: 18px;">26</div><div class="cm-gutterElement" style="height: 18px;">27</div><div class="cm-gutterElement" style="height: 18px;">28</div><div class="cm-gutterElement" style="height: 18px;">29</div><div class="cm-gutterElement" style="height: 18px;">30</div><div class="cm-gutterElement" style="height: 18px;">31</div><div class="cm-gutterElement" style="height: 18px;">32</div><div class="cm-gutterElement" style="height: 18px;">33</div><div class="cm-gutterElement" style="height: 18px;">34</div><div class="cm-gutterElement" style="height: 18px;">35</div><div class="cm-gutterElement" style="height: 18px;">36</div><div class="cm-gutterElement" style="height: 18px;">37</div><div class="cm-gutterElement" style="height: 18px;">38</div><div class="cm-gutterElement" style="height: 18px;">39</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 4px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 54px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 72px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 1206px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 72px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 54px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 18px; margin-top: 54px;"><span title="Fold line">⌄</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true" class="cm-content cm-lineWrapping" style="tab-size: 2;" role="textbox" aria-multiline="true" aria-readonly="true" aria-autocomplete="list"><div class="cm-line"><span class="cm-matchingBracket"><span class="ͼ1v">{</span></span></div><div class="cm-line">  <span class="ͼ1n">"errors"</span>: <span class="ͼ1v">[</span></div><div class="cm-line">    <span class="ͼ1v">{</span></div><div class="cm-line">      <span class="ͼ1n">"message"</span>: <span class="ͼ20">"Error parsing query: Expected Name, found {; for more information see http://spec.graphql.org/October2021/#ObjectField"</span>,</div><div class="cm-line">      <span class="ͼ1n">"locations"</span>: <span class="ͼ1v">[</span></div><div class="cm-line">        <span class="ͼ1v">{</span></div><div class="cm-line">          <span class="ͼ1n">"line"</span>: <span class="ͼ1r">9</span>,</div><div class="cm-line">          <span class="ͼ1n">"column"</span>: <span class="ͼ1r">79</span></div><div class="cm-line">        <span class="ͼ1v">}</span></div><div class="cm-line">      <span class="ͼ1v">]</span>,</div><div class="cm-line">      <span class="ͼ1n">"extensions"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">        <span class="ͼ1n">"code"</span>: <span class="ͼ20">"SYNTAX_ERROR"</span>,</div><div class="cm-line">        <span class="ͼ1n">"codes"</span>: <span class="ͼ1v">[</span></div><div class="cm-line">          <span class="ͼ20">"SYNTAX_ERROR"</span></div><div class="cm-line">        <span class="ͼ1v">]</span>,</div><div class="cm-line">        <span class="ͼ1n">"details"</span>: <span class="ͼ20">"GraphQL.Execution.SyntaxError: Error parsing query: Expected Name, found {; for more information see http://spec.graphql.org/October2021/#ObjectField\r\n ---&gt; GraphQLParser.Exceptions.GraphQLSyntaxErrorException: Syntax Error GraphQL (9:79) Expected Name, found {; for more information see http://spec.graphql.org/October2021/#ObjectField\n 8:           invoiceRegisterTransactions{\n 9:                 purchaseOrderDetailLines(after: 0, first: 0, sort:{}, filter:{{orderNumber: {contains: \"5074\"}}}){\n     </span><span class="ͼ20">                                                                             ^\n10:                   items{\n\r\n   at GraphQLParser.ParserContext.Throw_From_Expect(TokenKind kind, String description) in /_/src/GraphQLParser/ParserContext.cs:line 194\r\n   at GraphQLParser.ParserContext.ParseName(String description) in /_/src/GraphQLParser/ParserContext.Parse.cs:line 853\r\n   at GraphQLParser.ParserContext.ParseObjectField(Boolean isConstant) in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1014\r\n   </span><span class="ͼ20">at GraphQLParser.ParserContext.&lt;&gt;c.&lt;ParseObjectValue&gt;b__88_1(ParserContext&amp; context) in /_/src/GraphQLParser/ParserContext.Parse.cs:line 975\r\n   at GraphQLParser.ParserContext.ZeroOrMore[T](TokenKind open, ParseCallback`1 next, TokenKind close) in /_/src/GraphQLParser/ParserContext.cs:line 132\r\n   at GraphQLParser.ParserContext.ParseObjectValue(Boolean isConstant) in /_/src/GraphQLParser/ParserContext.Parse.cs:line 980\r\n   at GraphQLParser.ParserContext.ParseValueLiteral(Boolean isConstant) in /_/src/</span><span class="ͼ20">GraphQLParser/ParserContext.Parse.cs:line 1457\r\n   at GraphQLParser.ParserContext.ParseArgument() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 65\r\n   at GraphQLParser.ParserContext.ParseArguments() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 76\r\n   at GraphQLParser.ParserContext.ParseField() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 500\r\n   at GraphQLParser.ParserContext.ParseSelectionSet() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1258\r\n   at GraphQLParser.Parse</span><span class="ͼ20">rContext.ParseField() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 500\r\n   at GraphQLParser.ParserContext.ParseSelectionSet() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1258\r\n   at GraphQLParser.ParserContext.ParseField() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 500\r\n   at GraphQLParser.ParserContext.ParseSelectionSet() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1258\r\n   at GraphQLParser.ParserContext.ParseField() in /_/src/GraphQLParser/ParserContext.Parse.cs:lin</span><span class="ͼ20">e 500\r\n   at GraphQLParser.ParserContext.ParseSelectionSet() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1258\r\n   at GraphQLParser.ParserContext.ParseOperationDefinition() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 1071\r\n   at GraphQLParser.ParserContext.ParseNamedDefinition(String[] oneOf) in /_/src/GraphQLParser/ParserContext.Parse.cs:line 862\r\n   at GraphQLParser.ParserContext.ParseDefinitionsIfNotEOF() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 220\r\n   at GraphQLParse</span><span class="ͼ20">r.ParserContext.ParseDocument() in /_/src/GraphQLParser/ParserContext.Parse.cs:line 30\r\n   at GraphQL.Execution.GraphQLDocumentBuilder.Build(String body) in /_/src/GraphQL/Execution/GraphQLDocumentBuilder.cs:line 44\r\n   --- End of inner exception stack trace ---\r\n   at GraphQL.Execution.GraphQLDocumentBuilder.Build(String body) in /_/src/GraphQL/Execution/GraphQLDocumentBuilder.cs:line 44\r\n   at GraphQL.DocumentExecuter.CoreExecuteAsync(ExecutionOptions options) in /_/src/GraphQL/Execution/DocumentE</span><span class="ͼ20">xecuter.cs:line 233"</span></div><div class="cm-line">      <span class="ͼ1v">}</span></div><div class="cm-line">    <span class="ͼ1v">}</span></div><div class="cm-line">  <span class="ͼ1v">]</span>,</div><div class="cm-line">  <span class="ͼ1n">"extensions"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">    <span class="ͼ1n">"tracing"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">      <span class="ͼ1n">"version"</span>: <span class="ͼ1r">1</span>,</div><div class="cm-line">      <span class="ͼ1n">"startTime"</span>: <span class="ͼ20">"2023-02-03T10:47:19.5100928Z"</span>,</div><div class="cm-line">      <span class="ͼ1n">"endTime"</span>: <span class="ͼ20">"2023-02-03T10:47:19.5106982Z"</span>,</div><div class="cm-line">      <span class="ͼ1n">"duration"</span>: <span class="ͼ1r">605400</span>,</div><div class="cm-line">      <span class="ͼ1n">"parsing"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">        <span class="ͼ1n">"startOffset"</span>: <span class="ͼ1r">800</span>,</div><div class="cm-line">        <span class="ͼ1n">"duration"</span>: <span class="ͼ1r">583000</span></div><div class="cm-line">      <span class="ͼ1v">}</span>,</div><div class="cm-line">      <span class="ͼ1n">"validation"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">        <span class="ͼ1n">"startOffset"</span>: <span class="ͼ1r">0</span>,</div><div class="cm-line">        <span class="ͼ1n">"duration"</span>: <span class="ͼ1r">0</span></div><div class="cm-line">      <span class="ͼ1v">}</span>,</div><div class="cm-line">      <span class="ͼ1n">"execution"</span>: <span class="ͼ1v">{</span></div><div class="cm-line">        <span class="ͼ1n">"resolvers"</span>: <span class="ͼ1v">[</span><span class="ͼ1v">]</span></div><div class="cm-line">      <span class="ͼ1v">}</span></div><div class="cm-line">    <span class="ͼ1v">}</span></div><div class="cm-line">  <span class="ͼ1v">}</span></div><div class="cm-line"><span class="cm-matchingBracket"><span class="ͼ1v">}</span></span></div></div><div class="cm-selectionLayer" aria-hidden="true"></div><div class="cm-cursorLayer" aria-hidden="true" style="animation-duration: 1200ms;"><div class="cm-cursor cm-cursor-primary" style="left: 37.4028px; top: 4.88889px; height: 16px;"></div></div></div></div></div>
+</app-codemirror>
+        </div>
+      </div>
+    </div>
+  <!----><!----><!----></div><div nz-tab-body="" class="ant-tabs-tabpane ng-star-inserted" tabindex="-1" aria-hidden="true" style="display: none;"><!----></div><!----></div></div></nz-tabset>
+<div _ngcontent-his-c210="" class="query-result__bottom-pane">
+  <nav _ngcontent-his-c210="" class="query-result__bottom-pane__title-wrapper">
+    <!---->
+  </nav>
+  <div _ngcontent-his-c210="" class="query-result__bottom-pane__panels">
+    <!---->
+  </div>
+</div>
+</app-query-result>
+      <app-doc-viewer class="ng-tns-c223-4 ng-tns-c222-6 ng-star-inserted"><div class="app-doc-viewer ng-tns-c222-6 ng-star-inserted">
+  <!---->
+  <div class="doc-viewer-header ng-tns-c222-6">
+    <div class="doc-viewer-navigation ng-tns-c222-6">
+      <div class="doc-viewer-navigation--left ng-tns-c222-6">
+        <div track-id="go_back_docs" class="doc-viewer-navigation__option ng-tns-c222-6 ng-star-inserted">
+          <app-icon name="arrow-left" class="ng-tns-c222-6"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></i-lucide>
+</app-icon>
+          <span class="ng-tns-c222-6">Back</span>
+        </div><!---->
+        <div class="doc-viewer-navigation__option ng-tns-c222-6 ng-star-inserted">
+          <app-icon name="home" class="ng-tns-c222-6"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></i-lucide>
+</app-icon>
+        </div><!---->
+      </div>
+      <div class="doc-viewer-navigation--right ng-tns-c222-6">
+        <div nz-dropdown="" nztrigger="click" class="doc-viewer-navigation__option ng-tns-c222-6 ant-dropdown-trigger">
+          <app-icon name="more-horizontal" class="ng-tns-c222-6"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></i-lucide>
+</app-icon>
+        </div><!---->
+        <!---->
+        <div class="doc-viewer-navigation__option ng-tns-c222-6">
+          <app-icon name="x" class="ng-tns-c222-6"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></i-lucide>
+</app-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="doc-viewer-search-wrapper ng-tns-c222-6">
+    <div class="ngui-auto-complete-wrapper" style="position: relative;"><input ngui-auto-complete="" value-property-name="search" display-property-name="search" class="doc-viewer-search-input ng-tns-c222-6 ng-untouched ng-pristine ng-valid" placeholder="Search docs..." autocomplete="off"></div><!---->
+  </div>
+  <div class="doc-viewer-items ng-tns-c222-6">
+    <div class="ng-tns-c222-6 ng-star-inserted">
+      <!---->
+      
+        <app-doc-viewer-type _nghost-his-c219="" class="ng-tns-c222-6 ng-star-inserted">
+  <div _ngcontent-his-c219="" class="doc-viewer-section ng-star-inserted">
+    
+    <div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-field">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        InvoiceRegisterMatchingOrderLineFilterInput
+        <!---->
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+
+  <!---->
+
+  <!---->
+
+  <div _ngcontent-his-c219="" class="doc-viewer-section doc-viewer-fields ng-star-inserted">
+    <div _ngcontent-his-c219="" class="doc-viewer-section-title">
+      <span _ngcontent-his-c219="">
+        Fields
+      </span>
+      <div _ngcontent-his-c219="" class="doc-viewer-fields-actions">
+        <button _ngcontent-his-c219="" nz-dropdown="" nztrigger="click" type="button" class="icon-button ant-dropdown-trigger">
+          <app-icon _ngcontent-his-c219="" name="list"><i-lucide class="app-icon" _nghost-his-c11=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="inherit" stroke="currentColor" stroke-width="inherit" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></i-lucide>
+</app-icon>
+          
+            <!---->
+            <!---->
+            None<!----><!---->
+          <!---->
+        </button><!---->
+        <!---->
+      </div>
+    </div>
+    <div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          currencyCode
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          String!
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"></div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          accountCode
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          String!
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"></div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          invoiceHeaderKey
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          String!
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"></div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          creditNoteHeaderKey
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          String
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"></div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          summary
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          String
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"></div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderNumber
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderNumber</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          accountName
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>AccountName</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderDate
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          DateFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderDate</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          requiredDate
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          DateFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>RequiredDate</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          transactionUserKey1
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>TransactionUserKey1</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          transactionUserKey2
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>TransactionUserKey2</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          transactionUserKey3
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>TransactionUserKey3</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          transactionUserKey4
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>TransactionUserKey4</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          transactionUserKey5
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>TransactionUserKey5</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderReference
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderReference</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderBatchReference
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderBatchReference</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          userId
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>UserId</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          yearLabel
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>YearLabel</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          periodNumber
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          IntFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>PeriodNumber</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          periodRange
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          PeriodRangeFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>PeriodRange</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderSubLedger
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderSubLedger</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderLinePrimary
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          IntFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderLinePrimary</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderType
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          PurchaseOrderTypeEnumFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderType</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><div _ngcontent-his-c219="" class="doc-viewer-item doc-viewer-item-query ng-star-inserted">
+      <div _ngcontent-his-c219="" class="doc-viewer-item-query-inner">
+        <span _ngcontent-his-c219="" track-id="gotofield_docs" class="no-link-link">
+          orderStatusDescription
+        </span>
+        <!---->
+        <span _ngcontent-his-c219="" class="doc-viewer-item-type doc-viewer-item-query-type no-link-link">
+          StringFilterInput
+        </span>
+      </div>
+      <!---->
+      <div _ngcontent-his-c219="" markdown="" class="doc-viewer-item-query-description"><p>OrderStatusDescription</p>
+</div><!---->
+      <button _ngcontent-his-c219="" track-id="add_query" class="doc-viewer-item-query-add-btn">
+        <!---->
+        Add Fragment<!----><!---->
+      </button>
+    </div><!---->
+  </div><!---->
+
+  <!---->
+
+  <!---->
+<!----><!---->
+</app-doc-viewer-type><!---->
+      <!----><!---->
+      <!---->
+      <!---->
+    </div><!---->
+  </div>
+</div><!---->
+<div class="doc-viewer__last-updated ng-tns-c222-6 ng-star-inserted">
+  Last updated: Jan 16, 2023, 3:08:42 PM
+</div><!---->
+<!---->
+<app-flex-resizer class="ng-tns-c222-6" _nghost-his-c177=""></app-flex-resizer>
+</app-doc-viewer>
+    </div>
+  </div>
+  <div class="dialogs ng-tns-c223-4">
+    <nz-modal class="ng-tns-c223-4"></nz-modal><!---->
+    <app-subscription-url-dialog class="ng-tns-c223-4"><nz-modal></nz-modal><!---->
+</app-subscription-url-dialog>
+    <app-history-dialog class="ng-tns-c223-4"><nz-modal></nz-modal><!---->
+</app-history-dialog>
+    <app-dialog class="ng-tns-c223-4" _nghost-his-c145=""><nz-modal _ngcontent-his-c145=""></nz-modal><!---->
+</app-dialog>
+  </div>
+</div>
+</app-window>
+          <!----><!---->
+        </nz-content>
+        <div class="dialogs">
+          <app-environment-manager _nghost-his-c167=""><nz-modal _ngcontent-his-c167=""></nz-modal><!---->
+</app-environment-manager>
+          <app-plugin-manager><nz-modal></nz-modal><!---->
+</app-plugin-manager>
+          <app-settings-dialog _nghost-his-c135=""><nz-modal _ngcontent-his-c135=""></nz-modal><!---->
+</app-settings-dialog>
+          <app-import-curl-dialog _nghost-his-c136=""><nz-modal _ngcontent-his-c136=""></nz-modal><!---->
+</app-import-curl-dialog>
+          <app-add-collection-query-dialog><app-dialog _nghost-his-c145=""><nz-modal _ngcontent-his-c145=""></nz-modal><!---->
+</app-dialog>
+</app-add-collection-query-dialog>
+          <app-edit-collection-dialog _nghost-his-c166=""><nz-modal _ngcontent-his-c166=""></nz-modal><!---->
+</app-edit-collection-dialog>
+          <app-account-dialog><nz-modal></nz-modal><!---->
+</app-account-dialog>
+        </div>
+
+        <!---->
+        <!---->
+      </nz-layout>
+    </nz-layout>
+  </nz-layout>
+</div>
+</app-altair>
+</app-root>
+  <script rel="preload" as="script" type="text/javascript" src="./Altair_files/runtime.js.download"></script>
+  <script rel="preload" as="script" type="text/javascript" src="./Altair_files/polyfills.js.download"></script>
+  <script rel="preload" as="script" type="text/javascript" src="./Altair_files/main.js.download"></script>
+
+  <script>
+    function getSubscriptionsEndPoint() {
+      let subscriptionsEndPoint = "/graphql";
+      if (/^(?:[a-z]+:)?\/\//i.test(subscriptionsEndPoint)) {
+        // if location includes protocol (e.g. "wss://") then return exact string
+        return subscriptionsEndPoint;
+      } else if (subscriptionsEndPoint[0] != '/') {
+        // if location is relative (e.g. "api") then prepend host and current path
+        let currentUrl = /^[^?]*(?=\/)/.exec(window.location.pathname);
+        currentUrl = currentUrl ? currentUrl[0] : '';
+        while (subscriptionsEndPoint.substring(0, 3) == '../') {
+          subscriptionsEndPoint = subscriptionsEndPoint.substring(3);
+          currentUrl = /^[^?]*(?=\/)/.exec(currentUrl);
+          currentUrl = currentUrl ? currentUrl[0] : '';
+        }
+        return (window.location.protocol === "http:" ? "ws://" : "wss://") + window.location.host + currentUrl + '/' + subscriptionsEndPoint;
+      }
+      // if location is absolute (e.g. "/api") then prepend host only
+      return (window.location.protocol === "http:" ? "ws://" : "wss://") + window.location.host + subscriptionsEndPoint;
+    }
+
+    var altairOptions = {
+        endpointURL: "/graphql",
+        subscriptionsEndpoint: getSubscriptionsEndPoint(),
+        initialHeaders: {"Accept":"application/json","Content-Type":"application/json","X-api-token":"130fh9823bd023hd892d0j238dh","Authorization":"Bearer your_bearer_here","X-Instance-Id":"Instance_Id"},
+        initialSubscriptionsPayload: null,
+    };
+
+    window.addEventListener("load", function() {
+      AltairGraphQL.init(altairOptions);
+    });
+  </script>
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="./Altair_files/browserLink" async="async" id="__browserLink_initializationData" data-requestid="860b63769e1648728e4901890d0d6f6e" data-requestmappingfromserver="false" data-connecturl="http://localhost:59477/8d5985f95142481ebe92922a96a25ef0/browserLink"></script>
+<!-- End Browser Link -->
+
+<script src="./Altair_files/aspnetcore-browser-refresh.js.download"></script>
+
+
+<div class="cdk-overlay-container"></div></body></html>
