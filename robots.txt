@@ -1,3 +1,3 @@
-Sitemap: https://sorintravel.com/sitemap.xml
+Sitemap: https://sorintravels.com/sitemap.xml
 User-Agent: *
 Allow: /
